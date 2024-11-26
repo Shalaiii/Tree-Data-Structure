@@ -5,16 +5,19 @@ public class GemillanTaskManager {
 
     static class Task implements Comparable<Task> {
         String name;
-        int priority;
+        int priority; // Priority of the task (lower is more urgent)
 
+        // Constructor to initialize the task name and priority
         Task(String name, int priority) {
             this.name = name;
-            this.priority = priority;
+            this.priority = priority; 
         }
 
+        // Override the compareTo method to compare tasks by priority
         @Override
         public int compareTo(Task other) {
             return Integer.compare(this.priority, other.priority);
+            // Ensures a min-heap (lowest priority value is served first)
         }
 
         @Override
@@ -39,7 +42,7 @@ public class GemillanTaskManager {
             scanner.nextLine(); // consume newline
 
             switch (choice) {
-                case 1:
+                case 1: // Add a new task
                     System.out.print("Enter task name: ");
                     String name = scanner.nextLine();
                     System.out.print("Enter task priority (lower is more urgent): ");
@@ -48,7 +51,7 @@ public class GemillanTaskManager {
                     System.out.println("Task added.");
                     break;
 
-                case 2:
+                case 2: // View the next task (highest priority)
                     if (taskQueue.isEmpty()) {
                         System.out.println("No tasks in the queue.");
                     } else {
@@ -56,7 +59,7 @@ public class GemillanTaskManager {
                     }
                     break;
 
-                case 3:
+                case 3: // Complete the next task
                     if (taskQueue.isEmpty()) {
                         System.out.println("No tasks to complete.");
                     } else {
@@ -64,7 +67,7 @@ public class GemillanTaskManager {
                     }
                     break;
 
-                case 4:
+                case 4: // View all tasks in the queue
                     if (taskQueue.isEmpty()) {
                         System.out.println("No tasks in the queue.");
                     } else {
@@ -75,12 +78,12 @@ public class GemillanTaskManager {
                     }
                     break;
 
-                case 5:
+                case 5: // Exit the program
                     System.out.println("Exiting Task Manager. Goodbye!");
                     scanner.close();
                     return;
 
-                default:
+                default: // Handle invalid menu choices
                     System.out.println("Invalid option. Try again.");
             }
 
