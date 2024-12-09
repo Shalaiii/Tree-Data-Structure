@@ -2,8 +2,7 @@ public class GemillanHeap{
     private int[] heap;
     private int size;
     private int capacity;
-
-    // Constructor to initialize the heap with a given capacity
+    
     public GemillanHeap(int capacity) {
         this.capacity = capacity;
         this.size = 0;
