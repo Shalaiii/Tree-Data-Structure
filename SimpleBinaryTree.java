@@ -39,7 +39,6 @@ public class SimpleBinaryTree {
         return root;
     }
 
-    // Inorder Traversal (Left, Root, Right)
     public void inorderTraversal() {
         inorderRec(root);
     }
