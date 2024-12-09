@@ -1,8 +1,11 @@
 # File System Tree 
 
+INTRODUCTION
 This Java console application is a File System Tree Structure. It allows users to create and manage a tree-like file system with folders and files, similar to how real-world file systems work, like in our computer. 
 This simulated structure uses Java objects to represent folders and files, arranged in a hierarchical tree format. Each folder can contain multiple files and subfolders, which can be navigated, displayed, added to, or deleted.
+![image](https://github.com/user-attachments/assets/6a5c66dd-80ac-4f17-a818-6803d5da275c)
 
+FEATURES
 This application can display the tree, add, remove file or folder, can exit the program and has smooth workflow. 
     Display Tree: Users can view the entire file system structure starting from the root. The tree structure visually represents files and folders.
     Add Folder/File: Users can add new folders or files under any specified parent folder. If the specified parent folder does not exist, it can be created automatically.
